@@ -59,11 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
             // Clicar num dos elementos da lista para remover tarefa
 
-            listaTarefa.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            listaTarefa.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
                 @Override
-                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                     removeTarefa(ids.get(i));
-
+                    return true;
                 }
             });
 
